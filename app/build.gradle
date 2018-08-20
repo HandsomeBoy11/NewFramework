@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "com.helw.m.anew"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        // dex突破65535的限制
+        multiDexEnabled true
+        sourceSets {
+            main() {
+                jniLibs.srcDirs = ['libs']
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':mvp-rx')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    //65535分包
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile 'com.flyco.banner:FlycoBanner_Lib:2.0.2@aar'
+    compile 'com.android.support:recyclerview-v7:'+rootProject.ext.appcompat7Version
+//    compile 'cn.yipianfengye.android:zxing-library:2.2'
+    compile 'com.youth.banner:banner:1.4.10'  //最新版本
+
+    compile 'com.github.Syehunter:PinyinUtils:1.0.0'
+
+    compile 'com.mylhyl:acp:1.2.0'//权限处理
+
+
+}

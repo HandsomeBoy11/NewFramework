@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.helw.m.anew.ui.tab1.activity.AddressActivity">
+<com.helw.m.anew.framework.widget.TitleBar
+    android:id="@+id/address_title"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"/>
+    <Button
+        android:id="@+id/bt_back"
+        android:text="fanhui "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <com.helw.m.anew.ui.tab1.weight.SideIndexBar
+            android:id="@+id/sideIndexBar"
+            android:layout_alignParentRight="true"
+            android:layout_width="36dp"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+</LinearLayout>

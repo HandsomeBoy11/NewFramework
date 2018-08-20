@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.helw.m.anew.framework.widget.NoSlidingGridView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/nsgv_icon"
+    android:numColumns="4"
+    android:verticalSpacing="5dp"
+    android:layout_height="wrap_content">
+
+</com.helw.m.anew.framework.widget.NoSlidingGridView>
