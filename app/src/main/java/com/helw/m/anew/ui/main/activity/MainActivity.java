@@ -46,7 +46,7 @@ public class MainActivity extends BaseActivity{
     }
 
     public void initView() {
-        // TODO: 2018/9/18 提交测试
+        // TODO: 2018/9/18 提交测试22
 //        getPresenter().getData();
 //        getPresenter().getData2();
 //        getPresenter().setDatas(getPresenter().getDataSingle());
